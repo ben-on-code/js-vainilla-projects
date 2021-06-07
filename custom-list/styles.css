@@ -1,0 +1,83 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    background-color: black;
+  }
+  
+  /* Shopping Form */
+  .shopping {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .shopping input{ 
+
+  }
+
+  .shopping input:focus{ 
+    outline-color: black;
+  }
+
+  .shopping button{
+    background-color: black;
+    color: white;
+  }
+  
+  .shopping-list {
+    background-color: darkslategrey;
+    padding: 3rem;
+    border-radius: 1rem;
+    width: 60vw;
+    margin: 4rem 0;
+  }
+
+  .shopping-list h1{
+      color: black;
+      text-transform: uppercase;
+  }
+  
+  .shopping-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .shopping-item {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+
+  .shopping-item .itemName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+  }
+  
+  .shopping-item input[type="checkbox"] {
+    margin-right: .5rem;
+    margin-top: 4px;
+  }
+  
+  .shopping-item input[type="checkbox"]:checked + .itemName {
+    opacity: 0.5;
+  }
+  
+  .shopping-item button {   
+      padding: 1px 2px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+
+  }
+  
+  .shopping-item button:hover {
+    transform: scale(1.2);
+  }
+  
