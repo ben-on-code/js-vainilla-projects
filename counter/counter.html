@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .counter {
+            display: flex;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .button-container{
+            width: 50vw;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <h1>COUNTER</h1>
+    <span class="counter">0</span>
+    <div class="button-container">
+        <button class="btn decrease" style="padding: 5px 10px; border: 2px solid red">DECREASE</button>
+        <button class="btn reset" style="padding: 5px 10px;">RESET</button>
+        <button class="btn increase" style="padding: 5px 10px; border: 2px solid blue">INCREASE</button>
+    </div>
+    <script>
+        const value = document.querySelector('.counter');
+        const buttons = document.querySelectorAll('.btn');
+        let counter = 0;
+
+        function handleClickButton(e) {
+            const selectBtn = e.currentTarget.classList;
+
+            if (selectBtn.contains('decrease')) {
+                counter--;
+                value.textContent = counter;
+            } else if (selectBtn.contains('increase')) {
+                counter++;
+                value.textContent = counter;
+            } else {
+                counter = 0;
+                value.textContent = counter;
+            }
+        }
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', handleClickButton);
+        });
+
+    </script>
+</body>
+
+</html>
